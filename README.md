@@ -41,4 +41,27 @@
 - Output in localhost
 ![image](https://github.com/aravindsriraj/Mercor-cloth-similarity-project/assets/60252521/e8b76b1a-6093-4bc1-ad5c-324b96b0c296)
 
+**Steps for Deployment**
+1. Write App (Flask, Tensorflow)
+- Implement the app in **main.py**
+
+2. Setup Google Cloud
+- Create new project
+- Activate Cloud Run API and Cloud Build API
+
+3. Install and init Google Cloud SDK
+https://cloud.google.com/sdk/docs/install
+
+4. Dockerfile, requirements.txt, .dockerignore
+https://cloud.google.com/run/docs/quickstarts#containerizing
+
+5. Cloud build & deploy
+> gcloud builds submit --tag gcr.io/<project_id>/<function_name>
+
+> gcloud run deploy --image gcr.io/<project_id>/<function_name> --platform managed
+
+6. Test
+- Test the code with test.py
+
+**Google cloud run app** - https://getsimilarity-ujmy7r6rkq-uc.a.run.app
 
